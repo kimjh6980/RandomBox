@@ -48,6 +48,25 @@ public class LaserPointer : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
+        RaycastHit hit;
+
+        // 2
+        if (Physics.Raycast(trackedObj.transform.position, transform.forward, out hit, 100))
+        {
+            hitPoint = hit.point;
+            ShowLaser(hit);
+        }
+
+        if (Controller.GetPressDown(SteamVR_Controller.ButtonMask.Trigger))
+        {
+            Debug.Log("T=" + hit.collider.gameObject.name);
+            if (hit.collider.gameObject.name.Equals("Mode1")) {
+
+            } else if (hit.collider.gameObject.name.Equals("Mode1")) {
+
+            }
+        }
+        /*
         if (Controller.GetPress(SteamVR_Controller.ButtonMask.Touchpad))
         {
             RaycastHit hit;
@@ -63,5 +82,6 @@ public class LaserPointer : MonoBehaviour {
         {
             laser.SetActive(false);
         }
+        */
     }
 }

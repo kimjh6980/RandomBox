@@ -309,6 +309,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\KnobRotate.cs" />
     <Compile Include="Assets\Script\BodyColliderEvent.cs" />
     <Compile Include="Assets\Script\ControllerGrabObject.cs" />
     <Compile Include="Assets\Script\LaserPointer.cs" />
