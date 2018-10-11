@@ -126,5 +126,24 @@ public class ControllerGrabObject : MonoBehaviour {
                 ReleaseObject();
             }
         }
+
+        if (Controller.GetPress(SteamVR_Controller.ButtonMask.Grip))
+        {
+            if(this.GetComponent<HammerWake>().HammerStatus)
+            {
+                if (collidingObject)
+                {
+                    Debug.Log("Grip = " + collidingObject.name);
+                    if (collidingObject.name.Equals("Hammer"))
+                    {
+                        Debug.Log("Hammer");
+                        this.GetComponent<HammerWake>().Wake();
+                        this.GetComponent<SphereCollider>().enabled = false;
+                        //GameObject.Find("Controller(right)/Model").SetActive(false);
+                    }
+                }
+            }
+            
+        }
     }
 }

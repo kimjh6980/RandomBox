@@ -61,9 +61,18 @@ public class LaserPointer : MonoBehaviour {
         {
             Debug.Log("T=" + hit.collider.gameObject.name);
             if (hit.collider.gameObject.name.Equals("Mode1")) {
-
-            } else if (hit.collider.gameObject.name.Equals("Mode1")) {
-
+                GameObject Canvas = GameObject.Find("3_Fire");
+                Canvas.SetActive(false);
+                GameObject knob = GameObject.Find("Knob");
+                knob.GetComponent<KnobRotate>().Mode1Start();
+                this.GetComponent<LaserPointer>().enabled = false;
+            } else if (hit.collider.gameObject.name.Equals("Mode2")) {
+                GameObject Canvas = GameObject.Find("3_Fire");
+                Canvas.SetActive(false);
+                GameObject HammerList = GameObject.Find("HammerList");
+                HammerList.SetActive(true);
+                this.GetComponent<LaserPointer>().enabled = false;
+                this.GetComponent<HammerWake>().HammerStatus = true;
             }
         }
         /*

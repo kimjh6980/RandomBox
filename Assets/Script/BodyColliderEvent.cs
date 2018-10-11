@@ -16,7 +16,6 @@ public class BodyColliderEvent : MonoBehaviour {
 
     public void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.name);
         if (other.CompareTag("TP_Ring"))
         {
             
