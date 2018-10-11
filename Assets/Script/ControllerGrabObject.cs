@@ -30,6 +30,7 @@ public class ControllerGrabObject : MonoBehaviour {
         }
         // 2
         collidingObject = col.gameObject;
+        Debug.Log("Collider Object name = " + col.name);
     }
     // 1
     public void OnTriggerEnter(Collider other)

@@ -57,6 +57,16 @@ public class LaserPointer : MonoBehaviour {
             ShowLaser(hit);
         }
 
+        if(Input.GetKeyDown("q"))//-----------------------------------------------------------------------q
+        {
+            GameObject Canvas = GameObject.Find("3_Fire");
+            Canvas.SetActive(false);
+            GameObject knob = GameObject.Find("Knob");
+            knob.GetComponent<KnobRotate>().Mode1Start();
+            laser.SetActive(false);
+            this.GetComponent<LaserPointer>().enabled = false;
+        }
+
         if (Controller.GetPressDown(SteamVR_Controller.ButtonMask.Trigger))
         {
             Debug.Log("T=" + hit.collider.gameObject.name);
@@ -65,6 +75,7 @@ public class LaserPointer : MonoBehaviour {
                 Canvas.SetActive(false);
                 GameObject knob = GameObject.Find("Knob");
                 knob.GetComponent<KnobRotate>().Mode1Start();
+                laser.SetActive(false);
                 this.GetComponent<LaserPointer>().enabled = false;
             } else if (hit.collider.gameObject.name.Equals("Mode2")) {
                 GameObject Canvas = GameObject.Find("3_Fire");
@@ -72,6 +83,7 @@ public class LaserPointer : MonoBehaviour {
                 GameObject HammerList = GameObject.Find("HammerList");
                 HammerList.SetActive(true);
                 this.GetComponent<LaserPointer>().enabled = false;
+                laser.SetActive(false);
                 this.GetComponent<HammerWake>().HammerStatus = true;
             }
         }

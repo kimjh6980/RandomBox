@@ -310,14 +310,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Breakable Windows\Scripts\BreakableWindow.cs" />
-    <Compile Include="Assets\HammerWake.cs" />
-    <Compile Include="Assets\KnobRotate.cs" />
+    <Compile Include="Assets\BusControllerGrab.cs" />
     <Compile Include="Assets\Script\BodyColliderEvent.cs" />
     <Compile Include="Assets\Script\ControllerGrabObject.cs" />
+    <Compile Include="Assets\Script\HammerWake.cs" />
+    <Compile Include="Assets\Script\KnobRotate.cs" />
     <Compile Include="Assets\Script\LaserPointer.cs" />
     <Compile Include="Assets\Script\TPLaser.cs" />
     <Compile Include="Assets\Script\VechielTrigger.cs" />
     <Compile Include="Assets\Script\ViveControllerInputTest.cs" />
+    <Compile Include="Assets\Script\WindowBreak.cs" />
+    <Compile Include="Assets\Script\WindowEachHit.cs" />
+    <Compile Include="Assets\Script\windowHit.cs" />
     <Compile Include="Assets\SteamVR\Extras\SteamVR_GazeTracker.cs" />
     <Compile Include="Assets\SteamVR\Extras\SteamVR_LaserPointer.cs" />
     <Compile Include="Assets\SteamVR\Extras\SteamVR_Teleporter.cs" />
@@ -420,9 +424,6 @@
     <Compile Include="Assets\SteamVR\Scripts\SteamVR_TrackedObject.cs" />
     <Compile Include="Assets\SteamVR\Scripts\SteamVR_UpdatePoses.cs" />
     <Compile Include="Assets\SteamVR\Scripts\SteamVR_Utils.cs" />
-    <Compile Include="Assets\WindowBreak.cs" />
-    <Compile Include="Assets\WindowEachHit.cs" />
-    <Compile Include="Assets\windowHit.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\SteamVR\InteractionSystem\Core\Shaders\SeeThru.shader" />
