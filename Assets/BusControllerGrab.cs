@@ -156,7 +156,7 @@ public class BusControllerGrab : MonoBehaviour {
         {
             if (objectInHand.name == "KnobBody")
             {
-                objectInHand.transform.localRotation = Quaternion.Slerp(transform.rotation, ToFin, Time.deltaTime * damp);
+                KnobBody.transform.Rotate(new Vector3(0, 240, 0) * (Time.deltaTime * 0.2f));
                 //Debug.Log("Obj - YV = " + YValue);
             }
         }
