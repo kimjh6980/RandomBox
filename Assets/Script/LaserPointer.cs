@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LaserPointer : MonoBehaviour {
 
@@ -82,9 +83,13 @@ public class LaserPointer : MonoBehaviour {
                 Canvas.SetActive(false);
                 GameObject HammerList = GameObject.Find("HammerList");
                 HammerList.SetActive(true);
-                this.GetComponent<LaserPointer>().enabled = false;
                 laser.SetActive(false);
+                this.GetComponent<LaserPointer>().enabled = false;
                 this.GetComponent<HammerWake>().HammerStatus = true;
+            }
+            if(hit.collider.gameObject.name.Equals("FinishButton"))
+            {
+                SceneManager.LoadScene("MainScene");
             }
         }
         /*

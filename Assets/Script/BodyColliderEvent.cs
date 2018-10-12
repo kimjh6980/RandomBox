@@ -5,13 +5,17 @@ using UnityEngine;
 public class BodyColliderEvent : MonoBehaviour {
 
 	public GameObject[] ring = new GameObject[10];
+    public GameObject RightController;
     private Animator BusDoorAni;
     private Animator BusAni;
+    private GameObject FinishCanvas;
 
     private void Awake()
     {
         BusDoorAni = GameObject.Find("BusAddInner").GetComponent<Animator>();
         BusAni = GameObject.Find("Player&Bus").GetComponent<Animator>();
+        FinishCanvas = GameObject.Find("FinishCanvas");
+        FinishCanvas.SetActive(false);
     }
 
     public void OnTriggerEnter(Collider other)
@@ -28,7 +32,12 @@ public class BodyColliderEvent : MonoBehaviour {
                     BusAni.SetInteger("BusRun", 1);
                     //ring[1].SetActive(true);
                     break;
+                case "R2":
+                    FinishCanvas.SetActive(true);
+                    RightController.GetComponent<LaserPointer>().enabled = true;
+                    break;
             }
+
         }
     }
 }

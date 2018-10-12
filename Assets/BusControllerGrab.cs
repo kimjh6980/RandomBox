@@ -111,10 +111,6 @@ public class BusControllerGrab : MonoBehaviour {
         objectInHand = null;
     }
 
-    private static Vector3 Finrotate = new Vector3(0, 240, 0).normalized;
-    Quaternion ToFin = Quaternion.LookRotation(Finrotate);
-    //(Quternion -> 0/0.8660254/0/-0.5)-----------------------------------
-
     // Update is called once per frame
     void Update()
     {
@@ -160,17 +156,5 @@ public class BusControllerGrab : MonoBehaviour {
                 //Debug.Log("Obj - YV = " + YValue);
             }
         }
-
-        if(Input.GetKey("a"))   {//----------------------------------------------------------------------------------a
-            GameObject KnobKey = GameObject.Find("KnobBody");
-            KnobKey.transform.localRotation = Quaternion.Slerp(transform.localRotation, ToFin, Time.deltaTime * damp);
-        }
-
-        if(Input.GetKey("w"))   //-----------------------------------------------------------------------------------w
-        {
-            GameObject KnobKey = GameObject.Find("KnobBody");
-            Debug.Log("W = " + KnobKey.transform.localRotation.x + "/" + KnobKey.transform.localRotation.y + "/" + KnobKey.transform.localRotation.z + "/" + KnobKey.transform.localRotation.w);
-        }
-        
     }
 }
