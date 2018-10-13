@@ -4,20 +4,10 @@ using UnityEngine;
 
 public class WindowBreak : MonoBehaviour
 {
-    private GameObject M2_2;
-    private GameObject M2_TP;
-    private GameObject M2_3;
-
-    private void Start()
-    {
-        M2_2 = GameObject.Find("M2_2");
-        M2_2.SetActive(false);
-        M2_TP = GameObject.Find("M2_TP");
-        M2_TP.SetActive(false);
-
-        M2_3 = GameObject.Find("M2_3");
-        M2_3.SetActive(false);
-    }
+    public GameObject RightHammer;
+    public GameObject M2_2;
+    public GameObject M2_TP;
+    public GameObject M2_3;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -30,6 +20,7 @@ public class WindowBreak : MonoBehaviour
             this.GetComponent<BreakableWindow>().breakWindow();
             M2_TP.SetActive(true);
             M2_3.SetActive(true);
+            RightHammer.SetActive(false);
         }
     }
 

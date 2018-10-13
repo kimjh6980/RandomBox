@@ -17,6 +17,9 @@ public class BusControllerGrab : MonoBehaviour {
     public float FinY = 240.0f;
     public float damp = 0.1f;
 
+    public GameObject M2_1;
+    public GameObject M2_2;
+
     private SteamVR_Controller.Device Controller
     {
         get { return SteamVR_Controller.Input((int)trackedObj.index); }
@@ -143,6 +146,8 @@ public class BusControllerGrab : MonoBehaviour {
                         Debug.Log("Hammer");
                         this.GetComponent<HammerWake>().Wake();
                         this.GetComponent<SphereCollider>().enabled = false;
+                        M2_1.SetActive(false);
+                        M2_2.SetActive(true);
                         //GameObject.Find("Controller(right)/Model").SetActive(false);
                     }
                 }

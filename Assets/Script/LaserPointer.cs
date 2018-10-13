@@ -86,6 +86,7 @@ public class LaserPointer : MonoBehaviour {
                 laser.SetActive(false);
                 this.GetComponent<LaserPointer>().enabled = false;
                 this.GetComponent<HammerWake>().HammerStatus = true;
+                this.GetComponent<HammerWake>().Canvas1UP();
             }
             if(hit.collider.gameObject.name.Equals("FinishButton"))
             {

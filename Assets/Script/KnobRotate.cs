@@ -38,6 +38,7 @@ public class KnobRotate : MonoBehaviour {
         //Debug.Log("Y: " + KnobBody.transform.localEulerAngles.y);
         if(KnobBody.transform.localEulerAngles.y > 120)
         {
+            KnobBody.GetComponent<CapsuleCollider>().enabled = false;
             M1_TP.SetActive(true);
             Mode1Canvas[0].SetActive(false);
             Mode1Canvas[1].SetActive(true);
