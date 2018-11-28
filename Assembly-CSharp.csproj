@@ -56,6 +56,7 @@
      <Compile Include="Assets\ani.cs" />
      <Compile Include="Assets\Breakable Windows\Scripts\BreakableWindow.cs" />
      <Compile Include="Assets\BusControllerGrab.cs" />
+     <Compile Include="Assets\Danbocchi\Demo\Script\SceneControllerScript.cs" />
      <Compile Include="Assets\QuickOutline\Scripts\Outline.cs" />
      <Compile Include="Assets\Raaaaay.cs" />
      <Compile Include="Assets\Script\BodyColliderEvent.cs" />
@@ -189,6 +190,8 @@
      <None Include="Assets\SteamVR\InteractionSystem\Core\Shaders\Silhouette.shader" />
      <None Include="Assets\SteamVR\Resources\SteamVR_ColorOut.shader" />
      <None Include="Assets\SteamVR\InteractionSystem\Core\Shaders\SeeThru.shader" />
+     <None Include="Assets\Danbocchi\readme_jp.txt" />
+     <None Include="Assets\Danbocchi\readme_en.txt" />
      <None Include="Assets\SteamVR\InteractionSystem\Readme_InteractionSystem.txt" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>D:/Capstone2/RandomBox/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
