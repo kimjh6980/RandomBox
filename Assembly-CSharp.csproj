@@ -53,6 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\ani.cs" />
      <Compile Include="Assets\Breakable Windows\Scripts\BreakableWindow.cs" />
      <Compile Include="Assets\BusControllerGrab.cs" />
      <Compile Include="Assets\QuickOutline\Scripts\Outline.cs" />
@@ -70,6 +71,7 @@
      <Compile Include="Assets\Script\windowHit.cs" />
      <Compile Include="Assets\sleepers\scripts\Random_touch.cs" />
      <Compile Include="Assets\sleepers\scripts\ShpalaInit.cs" />
+     <Compile Include="Assets\startani.cs" />
      <Compile Include="Assets\SteamVR\Extras\SteamVR_GazeTracker.cs" />
      <Compile Include="Assets\SteamVR\Extras\SteamVR_LaserPointer.cs" />
      <Compile Include="Assets\SteamVR\Extras\SteamVR_Teleporter.cs" />
