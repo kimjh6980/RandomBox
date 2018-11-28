@@ -389,6 +389,8 @@
     <Compile Include="Packages\com.unity.textmeshpro\Scripts\Runtime\TMPro_UGUI_Private.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Danbocchi\readme_en.txt" />
+    <None Include="Assets\Danbocchi\readme_jp.txt" />
     <None Include="Assets\QuickOutline\Readme.txt" />
     <None Include="Assets\QuickOutline\Resources\Shaders\OutlineFill.shader" />
     <None Include="Assets\QuickOutline\Resources\Shaders\OutlineMask.shader" />

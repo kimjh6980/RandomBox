@@ -316,8 +316,11 @@
     <Compile Include="Assets\ani.cs" />
     <Compile Include="Assets\Breakable Windows\Scripts\BreakableWindow.cs" />
     <Compile Include="Assets\BusControllerGrab.cs" />
+    <Compile Include="Assets\Danbocchi\Demo\Script\SceneControllerScript.cs" />
+    <Compile Include="Assets\Event2.cs" />
     <Compile Include="Assets\QuickOutline\Scripts\Outline.cs" />
     <Compile Include="Assets\Raaaaay.cs" />
+    <Compile Include="Assets\RightKnob.cs" />
     <Compile Include="Assets\Script\BodyColliderEvent.cs" />
     <Compile Include="Assets\Script\ControllerGrabObject.cs" />
     <Compile Include="Assets\Script\HammerWake.cs" />
@@ -329,6 +332,7 @@
     <Compile Include="Assets\Script\WindowBreak.cs" />
     <Compile Include="Assets\Script\WindowEachHit.cs" />
     <Compile Include="Assets\Script\windowHit.cs" />
+    <Compile Include="Assets\SFin.cs" />
     <Compile Include="Assets\sleepers\scripts\Random_touch.cs" />
     <Compile Include="Assets\sleepers\scripts\ShpalaInit.cs" />
     <Compile Include="Assets\startani.cs" />
@@ -434,8 +438,11 @@
     <Compile Include="Assets\SteamVR\Scripts\SteamVR_TrackedObject.cs" />
     <Compile Include="Assets\SteamVR\Scripts\SteamVR_UpdatePoses.cs" />
     <Compile Include="Assets\SteamVR\Scripts\SteamVR_Utils.cs" />
+    <Compile Include="Assets\TE_1.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Danbocchi\readme_en.txt" />
+    <None Include="Assets\Danbocchi\readme_jp.txt" />
     <None Include="Assets\QuickOutline\Readme.txt" />
     <None Include="Assets\QuickOutline\Resources\Shaders\OutlineFill.shader" />
     <None Include="Assets\QuickOutline\Resources\Shaders\OutlineMask.shader" />
