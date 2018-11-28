@@ -291,6 +291,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="RandomBox.Plugins.csproj">
+      <Project>{03DDAC0E-B005-9E90-99E6-0BE371271F72}</Project>
+      <Name>RandomBox.Plugins</Name>
+    </ProjectReference>
     <ProjectReference Include="UnityEditor.StandardEvents.csproj">
       <Project>{6800202F-4402-D405-F8CB-03DC7BD78B92}</Project>
       <Name>UnityEditor.StandardEvents</Name>
@@ -309,8 +313,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\ani.cs" />
     <Compile Include="Assets\Breakable Windows\Scripts\BreakableWindow.cs" />
     <Compile Include="Assets\BusControllerGrab.cs" />
+    <Compile Include="Assets\QuickOutline\Scripts\Outline.cs" />
+    <Compile Include="Assets\Raaaaay.cs" />
     <Compile Include="Assets\Script\BodyColliderEvent.cs" />
     <Compile Include="Assets\Script\ControllerGrabObject.cs" />
     <Compile Include="Assets\Script\HammerWake.cs" />
@@ -322,6 +329,9 @@
     <Compile Include="Assets\Script\WindowBreak.cs" />
     <Compile Include="Assets\Script\WindowEachHit.cs" />
     <Compile Include="Assets\Script\windowHit.cs" />
+    <Compile Include="Assets\sleepers\scripts\Random_touch.cs" />
+    <Compile Include="Assets\sleepers\scripts\ShpalaInit.cs" />
+    <Compile Include="Assets\startani.cs" />
     <Compile Include="Assets\SteamVR\Extras\SteamVR_GazeTracker.cs" />
     <Compile Include="Assets\SteamVR\Extras\SteamVR_LaserPointer.cs" />
     <Compile Include="Assets\SteamVR\Extras\SteamVR_Teleporter.cs" />
@@ -426,6 +436,14 @@
     <Compile Include="Assets\SteamVR\Scripts\SteamVR_Utils.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\QuickOutline\Readme.txt" />
+    <None Include="Assets\QuickOutline\Resources\Shaders\OutlineFill.shader" />
+    <None Include="Assets\QuickOutline\Resources\Shaders\OutlineMask.shader" />
+    <None Include="Assets\Realistic Rock\Shaders\Rock.shader" />
+    <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
+    <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
+    <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
+    <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
     <None Include="Assets\SteamVR\InteractionSystem\Core\Shaders\SeeThru.shader" />
     <None Include="Assets\SteamVR\InteractionSystem\Core\Shaders\Silhouette.shader" />
     <None Include="Assets\SteamVR\InteractionSystem\Hints\Shaders\ControllerButtonHints.shader" />

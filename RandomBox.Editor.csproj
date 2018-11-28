@@ -354,9 +354,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="RandomBox.Plugins.csproj">
+      <Project>{03DDAC0E-B005-9E90-99E6-0BE371271F72}</Project>
+      <Name>RandomBox.Plugins</Name>
+    </ProjectReference>
     <ProjectReference Include="RandomBox.csproj">
       <Project>{8749310E-A6AC-2436-3823-F11E5FBCF1C2}</Project>
       <Name>RandomBox</Name>
+    </ProjectReference>
+    <ProjectReference Include="RandomBox.Editor.Plugins.csproj">
+      <Project>{55E0A026-A5AD-B5F7-10EB-B9EC2060CA31}</Project>
+      <Name>RandomBox.Editor.Plugins</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.StandardEvents.csproj">
       <Project>{6800202F-4402-D405-F8CB-03DC7BD78B92}</Project>
@@ -384,6 +392,14 @@
     <Compile Include="Assets\SteamVR\Editor\SteamVR_Update.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\QuickOutline\Readme.txt" />
+    <None Include="Assets\QuickOutline\Resources\Shaders\OutlineFill.shader" />
+    <None Include="Assets\QuickOutline\Resources\Shaders\OutlineMask.shader" />
+    <None Include="Assets\Realistic Rock\Shaders\Rock.shader" />
+    <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
+    <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
+    <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
+    <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
     <None Include="Assets\SteamVR\InteractionSystem\Core\Shaders\SeeThru.shader" />
     <None Include="Assets\SteamVR\InteractionSystem\Core\Shaders\Silhouette.shader" />
     <None Include="Assets\SteamVR\InteractionSystem\Hints\Shaders\ControllerButtonHints.shader" />
