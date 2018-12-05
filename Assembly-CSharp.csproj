@@ -58,6 +58,7 @@
      <Compile Include="Assets\BusControllerGrab.cs" />
      <Compile Include="Assets\Danbocchi\Demo\Script\SceneControllerScript.cs" />
      <Compile Include="Assets\Event2.cs" />
+     <Compile Include="Assets\handle.cs" />
      <Compile Include="Assets\QuickOutline\Scripts\Outline.cs" />
      <Compile Include="Assets\Raaaaay.cs" />
      <Compile Include="Assets\RightKnob.cs" />

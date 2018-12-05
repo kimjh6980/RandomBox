@@ -13,6 +13,13 @@ public class RightKnob : MonoBehaviour {
     public GameObject TPCube1;
     public GameObject TPCube2;
 
+    private SteamVR_TrackedObject trackedObj;
+    // 2
+    private SteamVR_Controller.Device Controller
+    {
+        get { return SteamVR_Controller.Input((int)trackedObj.index); }
+    }
+
     // Use this for initialization
     void Start()
     {
@@ -23,26 +30,31 @@ public class RightKnob : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.name.Equals("Switch"))
+        if (Controller.GetHairTriggerDown())
         {
-            sw.Play();
-            dor2 = true;
+            if (other.name.Equals("Switch"))
+            {
+                sw.Play();
+                dor2 = true;
+            }
+
+            if (other.name.Equals("Door"))
+            {
+                if (dor2)
+                {
+                    Guide1.SetActive(false);
+                    dor.Play("ssd");
+                    Guide2.SetActive(true);
+                    TPCube1.SetActive(false);
+                    TPCube2.SetActive(true);
+                }
+                else
+                {
+                    dor.Play("tick");
+                }
+            }
         }
 
-        if(other.name.Equals("Door"))
-        {
-            if(dor2)
-            {
-                Guide1.SetActive(false);
-                dor.Play("ssd");
-                Guide2.SetActive(true);
-                TPCube1.SetActive(false);
-                TPCube2.SetActive(true);
-            }
-            else
-            {
-                dor.Play("tick");
-            }
-        }
+        
     }
 }
