@@ -6,6 +6,7 @@ public class handle : MonoBehaviour {
 
     public Animation sw;
     public Animation dor;
+    public Animation exit;
     public static bool dor2 = false;
 
     private SteamVR_TrackedObject trackedObj;
@@ -68,10 +69,16 @@ public class handle : MonoBehaviour {
         if (Controller.GetHairTriggerDown())
         {
             Debug.Log(gameObject.name + " Trigger Press");
+
             if (collidingObject.name.Equals("Switch"))
             {
                 sw.Play();
                 dor2 = true;
+            }
+
+            if (collidingObject.name.Equals("GlassDoor"))
+            {
+                exit.Play();
             }
 
             if (collidingObject.name.Equals("Door"))
@@ -85,6 +92,7 @@ public class handle : MonoBehaviour {
                     dor.Play("tick");
                 }
             }
+            
         }
 
         // 3
