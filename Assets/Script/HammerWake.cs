@@ -21,7 +21,7 @@ public class HammerWake : MonoBehaviour {
         M2_1.SetActive(false);
         HammerList.SetActive(false);
         HandHammer.SetActive(true);
-        GameObject.Find("Window1").GetComponent<BoxCollider>().enabled = true;
+        //GameObject.Find("Window1").GetComponent<BoxCollider>().enabled = true;
     }
 
     public void Canvas1UP()

@@ -13,7 +13,9 @@ public class handle : MonoBehaviour {
 
     private GameObject collidingObject;
     // 2
-    private GameObject objectInHand; 
+    private GameObject objectInHand;
+
+    public GameObject Canvas2;
     
     private SteamVR_Controller.Device Controller
     {
@@ -74,6 +76,7 @@ public class handle : MonoBehaviour {
             {
                 sw.Play();
                 dor2 = true;
+                
             }
 
             if (collidingObject.name.Equals("GlassDoor"))
@@ -85,6 +88,7 @@ public class handle : MonoBehaviour {
             {
                 if (dor2)
                 {
+                    Canvas2.SetActive(true);
                     dor.Play("ssd");
                 }
                 else

@@ -70,7 +70,7 @@ public class LaserPointer : MonoBehaviour {
 
         if (Controller.GetPressDown(SteamVR_Controller.ButtonMask.Trigger))
         {
-            Debug.Log("T=" + hit.collider.gameObject.name);
+            //Debug.Log("T=" + hit.collider.gameObject.name);
             if (hit.collider.gameObject.name.Equals("Mode1")) {
                 GameObject Canvas = GameObject.Find("3_Fire");
                 Canvas.SetActive(false);
