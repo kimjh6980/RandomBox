@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Bus.unity
+- path: Assets/Scenes/Subway.unity
   isLoaded: 1
   isActive: 1
