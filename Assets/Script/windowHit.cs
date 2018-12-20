@@ -22,5 +22,6 @@ public class windowHit : MonoBehaviour {
         windowCount++;
         windowlist[windowCount].SetActive(false);
         windowlist[windowCount+1].SetActive(true);
+        this.GetComponent<AudioSource>().Play();
     }
 }

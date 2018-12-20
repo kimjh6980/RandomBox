@@ -16,6 +16,9 @@ public class handle : MonoBehaviour {
     private GameObject objectInHand;
 
     public GameObject Canvas2;
+
+    public GameObject sd;
+    public GameObject gd;
     
     private SteamVR_Controller.Device Controller
     {
@@ -72,30 +75,36 @@ public class handle : MonoBehaviour {
         {
             Debug.Log(gameObject.name + " Trigger Press");
 
-            if (collidingObject.name.Equals("Switch"))
+            if(collidingObject != null)
             {
-                sw.Play();
-                dor2 = true;
-                
-            }
-
-            if (collidingObject.name.Equals("GlassDoor"))
-            {
-                exit.Play();
-            }
-
-            if (collidingObject.name.Equals("Door"))
-            {
-                if (dor2)
+                if (collidingObject.name.Equals("Switch"))
                 {
-                    Canvas2.SetActive(true);
-                    dor.Play("ssd");
+                    sw.Play();
+                    dor2 = true;
+
                 }
-                else
+
+                if (collidingObject.name.Equals("GlassDoor"))
                 {
-                    dor.Play("tick");
+                    gd.GetComponent<AudioSource>().Play();
+                    exit.Play();
+                }
+
+                if (collidingObject.name.Equals("Door"))
+                {
+                    if (dor2)
+                    {
+                        Canvas2.SetActive(true);
+                        dor.Play("ssd");
+                        sd.GetComponent<AudioSource>().Play();
+                    }
+                    else
+                    {
+                        dor.Play("tick");
+                    }
                 }
             }
+            
             
         }
 

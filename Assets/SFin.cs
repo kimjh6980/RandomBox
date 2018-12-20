@@ -6,6 +6,7 @@ public class SFin : MonoBehaviour {
 
     public GameObject Right;
     public GameObject FinCanvas;
+    public GameObject Head;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -13,6 +14,7 @@ public class SFin : MonoBehaviour {
         {
             Right.GetComponent<LaserPointer>().enabled = true;
             FinCanvas.SetActive(true);
+            Head.GetComponent<AudioSource>().Play();
         }
     }
 }

@@ -10,6 +10,9 @@ public class BodyColliderEvent : MonoBehaviour {
     private Animator BusAni;
     private GameObject FinishCanvas;
 
+    public GameObject bus;
+    public GameObject head;
+
     private void Awake()
     {
         BusDoorAni = GameObject.Find("BusAddInner").GetComponent<Animator>();
@@ -26,6 +29,7 @@ public class BodyColliderEvent : MonoBehaviour {
             switch(other.name)
             {
                 case "R1":
+                    bus.GetComponent<AudioSource>().Play();
                     Debug.Log("TP_Ring R1");
                     ring[0].SetActive(false);
                     BusDoorAni.SetInteger("StatusNum", 2);
@@ -35,9 +39,9 @@ public class BodyColliderEvent : MonoBehaviour {
                 case "R2":
                     FinishCanvas.SetActive(true);
                     RightController.GetComponent<LaserPointer>().enabled = true;
+                    head.GetComponent<AudioSource>().Play();
                     break;
             }
-
         }
     }
 }
